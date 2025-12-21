@@ -2,14 +2,13 @@ import React, { useState } from "react";
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const validateEmail = (value: string) => /\S+@\S+\.\S+/.test(value);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     setErrorMessage("");
 
     if (!validateEmail(email)) {
@@ -20,18 +19,22 @@ const Newsletter: React.FC = () => {
 
     setStatus("submitting");
 
+    setTimeout(() => {
+      setStatus("success");
+      setEmail("");
+    }, 800);
   };
 
   return (
     <div className="text-center md:text-left">
-      <p className="leading-relaxed mb-3">
+      <p className="mb-3 leading-relaxed">
         Sign up for new bakes, offers and updates from the bakery.
       </p>
 
       <form
-        className="inline-flex w-full max-w-xs border border-pink-200"
         onSubmit={handleSubmit}
         noValidate
+        className="inline-flex w-full max-w-xs overflow-hidden rounded-full border border-[#E8CFA4] bg-white"
       >
         <input
           type="email"
@@ -43,7 +46,7 @@ const Newsletter: React.FC = () => {
         />
         <button
           type="submit"
-          className="px-4 py-2 text-[11px] uppercase tracking-[0.2em] bg-black text-white hover:bg-neutral-800 transition-colors"
+          className="px-4 py-2 text-[11px] uppercase tracking-[0.2em] bg-[#8C1C13] text-white hover:bg-[#C5162C] transition-colors disabled:opacity-60"
           disabled={status === "submitting"}
         >
           {status === "submitting" ? "..." : "Go!"}
@@ -53,10 +56,9 @@ const Newsletter: React.FC = () => {
       {status === "error" && (
         <p className="mt-2 text-[11px] text-red-600">{errorMessage}</p>
       )}
+
       {status === "success" && (
-        <p className="mt-2 text-[11px] text-green-700">
-          Thanks for subscribing!
-        </p>
+        <p className="mt-2 text-[11px] text-green-700">Thanks for subscribing!</p>
       )}
     </div>
   );
