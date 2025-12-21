@@ -7,7 +7,7 @@ A small brochure-style website for a Bakery, built with React, React Router and 
 - React + TypeScript  
 - React Router for page navigation  
 - Tailwind CSS for styling  
-- Vite (or CRA) as the build tool
+- Vite as the build tool
 
 
 ## Running the project
