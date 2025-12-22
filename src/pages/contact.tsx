@@ -1,23 +1,23 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Gmap from "../components/gmap";
-import cupcakesHero from "../assets/images/fairy-cakes.png";
+import biscuitHero from "../assets/images/biscuit-rusk.png";
 import { FaInstagram } from "react-icons/fa";
 import EmailForm from "../components/form";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-[#FFF7ED] text-[#1B1B1B]">
+    <div className="min-h-screen text-[#1B1B1B]">
       <header>
         <Navbar />
       </header>
 
       <main>
         {/* Smaller hero band */}
-        <section className="border-b border-[#E8CFA4] bg-[#FFF7ED]">
+        <section className="border-b border-[#E8CFA4] ">
           <div className="h-[200px] md:h-[260px] overflow-hidden">
             <img
-              src={cupcakesHero}
+              src={biscuitHero}
               alt="Novelty Bakery cupcakes"
               className="w-full h-full object-cover object-center"
             />
@@ -25,7 +25,7 @@ const Contact = () => {
         </section>
 
         {/* Compact contact content */}
-        <section className="border-b border-[#E8CFA4] bg-[#FFF7ED]">
+        <section className="border-b border-[#E8CFA4]">
           <div className="max-w-5xl mx-auto px-6 md:px-18 py-10 md:py-12 grid gap-10 md:grid-cols-2">
             {/* Left: details */}
             <div>

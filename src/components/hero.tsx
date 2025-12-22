@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import fairyCakes from "../assets/images/fairy-cakes.png"
+import fairyCakes from "../assets/images/palmier.png"
 
 const Hero = () => {
   return (
@@ -31,10 +31,10 @@ const Hero = () => {
               Fresh puff pastries, breads, cakes, and everyday treats.
             </p>
 
-            {/* Gold‑accent button */}
+
             <Link to="/products">
-              <button className="inline-flex items-center justify-center border border-[#C7A840] px-12 py-3 text-[11px] tracking-[0.2em] uppercase text-[#8C1C13] bg-[#FFF7ED] hover:bg-[#F8EFD9] transition-colors">
-                View Products
+              <button className="inline-flex items-center justify-center border  px-12 py-3 text-[11px] tracking-[0.12em] uppercase text-[#8C1C13] bg-[#FFF7ED] hover:bg-[#F8EFD9] transition-colors">
+                View Menu
               </button>
             </Link>
           </div>

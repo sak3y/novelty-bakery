@@ -34,7 +34,7 @@ const Newsletter: React.FC = () => {
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="inline-flex w-full max-w-xs overflow-hidden  border border-[#E8CFA4] bg-white"
+        className="inline-flex w-full max-w-xs overflow-hidden  border border-[#8C1C13] bg-white"
       >
         <input
           type="email"

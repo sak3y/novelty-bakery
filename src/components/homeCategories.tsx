@@ -10,14 +10,14 @@ const CategoriesSection = () => {
       text: "Our pastry counter is always changing, so there is always something new to try.",
     },
     {
-      title: "Palimiers",
+      title: "Delicacies",
       image: palmiersImg,
-      text: "From simple sponges to celebration cakes, all baked fresh on site.",
+      text: "Palmiers and other little treats for sharing or saving for later.",
     },
     {
       title: "Biscuits",
       image: biscuitImg,
-      text: "Seasonal treats and special bakes for every celebration throughout the year.",
+      text: "Crisp rusks and biscuits perfect with tea, coffee or for the biscuit tin.",
     },
   ];
 

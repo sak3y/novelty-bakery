@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[#E8CFA4] pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.16em] text-[#8C6A4A]">
+        <div className="border-t border-[#E8CFA4] pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.05em]">
           <Link to="/privacy" className="hover:text-[#8C1C13]">
             Privacy policy
           </Link>
