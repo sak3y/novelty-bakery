@@ -27,14 +27,14 @@ const Newsletter: React.FC = () => {
 
   return (
     <div className="text-center md:text-left">
-      <p className="mb-3 leading-relaxed">
-        Sign up for new bakes, offers and updates from the bakery.
+      <p className="mb-3 leading-relaxed text-center">
+        Follow us on our newsletter
       </p>
 
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="inline-flex w-full max-w-xs overflow-hidden rounded-full border border-[#E8CFA4] bg-white"
+        className="inline-flex w-full max-w-xs overflow-hidden  border border-[#E8CFA4] bg-white"
       >
         <input
           type="email"
@@ -54,11 +54,11 @@ const Newsletter: React.FC = () => {
       </form>
 
       {status === "error" && (
-        <p className="mt-2 text-[11px] text-red-600">{errorMessage}</p>
+        <p className="mt-2 text-center text-[11px] text-red-600">{errorMessage}</p>
       )}
 
       {status === "success" && (
-        <p className="mt-2 text-[11px] text-green-700">Thanks for subscribing!</p>
+        <p className="mt-2 text-[11px] text-center text-green-700">Thanks for subscribing!</p>
       )}
     </div>
   );

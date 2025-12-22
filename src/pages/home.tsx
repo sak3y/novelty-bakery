@@ -57,6 +57,8 @@ const Home = () => {
           {/* Space under card */}
           <div className="h-16 md:h-20" />
         </section>
+
+        
       </main>
 
       <Gmap />

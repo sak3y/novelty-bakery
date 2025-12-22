@@ -6,14 +6,14 @@ import { GoMail } from "react-icons/go";
 const Footer = () => {
   return (
     <footer className="border-t border-[#E8CFA4] bg-[#FFF7ED]">
-      <div className="max-w-6xl mx-auto px-4 pt-10 pb-6 text-[13px] text-[#3A2616]">
+      <div className="max-w-6xl mx-auto px-4 pt-10 pb-4 text-[13px] text-[#3A2616]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
           <div className="flex flex-col items-center gap-3 text-center">
             <p className="leading-relaxed">
-              Novelty Bakery is a much‑loved East Ham high street bakery, serving puff pastry, fresh
-              bread and biscuits for the local community.
+              Novelty Bakery is a local, East Ham high street bakery, that serves puff pastry, fresh
+              bread, and biscuits.
             </p>
-            <p className="leading-relaxed">Pick up your everyday favourites today.</p>
+            <p className="leading-relaxed">Visit us in store to see what we offer.</p>
 
             <div className="flex items-center gap-4 pt-1">
               <a
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-[#E8CFA4] pt-4 mt-2 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.22em] text-[#8C6A4A]">
+        <div className="border-t border-[#E8CFA4] pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.16em] text-[#8C6A4A]">
           <Link to="/privacy" className="hover:text-[#8C1C13]">
             Privacy policy
           </Link>
