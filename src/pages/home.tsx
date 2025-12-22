@@ -29,7 +29,7 @@ const Home = () => {
           {/* Centered framed card */}
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8">
             {/* Outer border */}
-            <div className="md:-mt-38 -mt-20 border border-[#FFF7ED] px-[8px] py-[8px]">
+            <div className="md:-mt-48 -mt-20 border border-[#FFF7ED] px-[8px] py-[8px]">
               {/* Inner card */}
               <div className="w-full h-full bg-[#FFF7ED] px-8 sm:px-14 py-10 md:py-8 text-center">
                 <p className="font-serif italic text-[18px] md:text-[22px] text-[#B46A3C] mb-3">
