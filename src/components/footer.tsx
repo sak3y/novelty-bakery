@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="text-center">
             <Newsletter />
 
-            <div className="mt-4 flex justify-center gap-6 text-[10px] uppercase tracking-[0.22em]">
+            <div className="mt-4 flex justify-center gap-4 text-[10px] uppercase tracking-[0.18em]">
               <Link to="/about" className="hover:text-[#8C1C13]">
                 About
               </Link>
