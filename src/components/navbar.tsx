@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Single row: links left + logo + links right (desktop) */}
         <div className="hidden md:flex items-center justify-between py-3 md:py-4">
           {/* Left links */}
-          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.22em] uppercase text-[#7A5A40]">
+          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.1em] uppercase text-[#7A5A40]">
             {leftLinks.map((item) => (
               <Link
                 key={item.to}
@@ -39,14 +39,14 @@ const Navbar = () => {
               <span className="block text-lg md:text-xl text-[#8C1C13] tracking-[0.01em] uppercase">
                 Novelty Bakery
               </span>
-              <span className="block text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-[#B46A3C] mt-1">
+              <span className="block text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[#B46A3C] mt-1">
                  East Ham
               </span>
             </Link>
           </div>
 
           {/* Right links */}
-          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.22em] uppercase text-[#7A5A40]">
+          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.1em] uppercase text-[#7A5A40]">
             {rightLinks.map((item) => (
               <Link
                 key={item.to}
