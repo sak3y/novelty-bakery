@@ -16,7 +16,7 @@ const Navbar = () => {
   const rightLinks = links.slice(2);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FFF3E0]/95 backdrop-blur border-b border-[#E8CFA4]">
+    <header className="sticky top-0 z-50 bg-[#FFF7ED]/95 backdrop-blur border-b border-[#E8CFA4]">
       <div className="max-w-6xl mx-auto px-4">
         {/* Single row: links left + logo + links right (desktop) */}
         <div className="hidden md:flex items-center justify-between py-3 md:py-4">

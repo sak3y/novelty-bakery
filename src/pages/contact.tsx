@@ -1,6 +1,9 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Gmap from "../components/gmap";
+import cupcakesHero from "../assets/images/fairy-cakes.png";
+import { FaInstagram } from "react-icons/fa";
+import EmailForm from "../components/form";
 
 const Contact = () => {
   return (
@@ -10,94 +13,69 @@ const Contact = () => {
       </header>
 
       <main>
-        {/* Intro */}
-        <section className="border-b border-[#E8CFA4]">
-          <div className="max-w-5xl mx-auto px-4 py-12 md:py-16 text-center">
-            <p className="text-[11px] tracking-[0.22em] uppercase text-[#B46A3C] mb-3">
-              Contact
-            </p>
-            <h1 className="text-2xl md:text-3xl tracking-[0.14em] uppercase text-[#2B1400]">
-              Visit, call or drop a note
-            </h1>
-            <div className="h-px w-16 mx-auto mt-4 mb-6 bg-[#D1A954]" />
-            <p className="mt-2 text-sm md:text-base leading-relaxed text-[#4A3725] max-w-2xl mx-auto">
-              Whether you are ordering a celebration cake or popping in for everyday pastries,
-              these are the best ways to reach Novelty Bakery.
-            </p>
+        {/* Smaller hero band */}
+        <section className="border-b border-[#E8CFA4] bg-[#FFF7ED]">
+          <div className="h-[200px] md:h-[260px] overflow-hidden">
+            <img
+              src={cupcakesHero}
+              alt="Novelty Bakery cupcakes"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </section>
 
-        {/* Details + form */}
-        <section className="border-b border-[#E8CFA4]">
-          <div className="max-w-6xl mx-auto px-4 py-12 md:py-18 grid gap-10 md:grid-cols-2 md:items-start">
-            {/* Contact details */}
-            <div className="space-y-7 text-sm text-[#4A3725]">
-              <div>
-                <h2 className="text-xs tracking-[0.22em] uppercase text-[#2B1400] mb-2">
-                  Bakery address
-                </h2>
-                <p>
-                  Novelty Bakery
-                  <br />
-                  393 High Street North
-                  <br />
-                  London E12 6PG
-                </p>
-              </div>
+        {/* Compact contact content */}
+        <section className="border-b border-[#E8CFA4] bg-[#FFF7ED]">
+          <div className="max-w-5xl mx-auto px-6 md:px-18 py-10 md:py-12 grid gap-10 md:grid-cols-2">
+            {/* Left: details */}
+            <div>
+              <h1 className="font-serif text-[22px] md:text-[24px] text-[#8C1C13] mb-2">
+                Contact Us
+              </h1>
+              <div className="w-20 h-px bg-[#C7A840] mb-6" />
 
-              <div>
-                <h2 className="text-xs tracking-[0.22em] uppercase text-[#2B1400] mb-2">
-                  Opening times
-                </h2>
-                <p>
-                  Saturday: 10:00 – 17:00
-                  <br />
-                  Sunday: 09:00 – 16:30
-                </p>
-              </div>
+              <div className="space-y-4 text-[13px] md:text-[14px] text-[#4A3725]">
+                <div>
+                  <p className="font-semibold text-[#8C1C13] mb-1">Address</p>
+                  <p>
+                    Novelty Bakery
+                    <br />
+                    393 High Street North
+                    <br />
+                    London E12 6TP
+                  </p>
+                </div>
 
-              <div>
-                <h2 className="text-xs tracking-[0.22em] uppercase text-[#2B1400] mb-2">
-                  Get in touch
-                </h2>
-                <p>
-                  Phone: <span className="font-semibold">020 8471 3415</span>
-                  <br />
-                  Email:{" "}
-                  <a
-                    href="mailto:hello@noveltybakery.co.uk"
-                    className="underline decoration-[#D1A954] underline-offset-2 hover:text-[#C5162C]"
-                  >
-                    hello@noveltybakery.co.uk
-                  </a>
-                </p>
-                <p className="mt-2">
-                  Instagram:{" "}
-                  <a
-                    href="https://www.instagram.com/noveltybakery_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-[#D1A954] underline-offset-2 hover:text-[#C5162C]"
-                  >
-                    @noveltybakery_
-                  </a>
-                </p>
-              </div>
+                <div>
+                  <p className="font-semibold text-[#8C1C13] mb-1">Phone</p>
+                  <a href="tel:02084713415">020 8471 3415</a>
+                </div>
 
-              <div>
-                <h2 className="text-xs tracking-[0.22em] uppercase text-[#2B1400] mb-2">
-                  Best time to call
-                </h2>
-                <p>
-                  Mornings are usually busiest in the bakery. For cake enquiries, afternoons are
-                  often the easiest time to talk.
-                </p>
+                <div>
+                  <p className="font-semibold text-[#8C1C13] mb-1">Hours</p>
+                  <p>
+                    Mon–Sat: 9am–7pm
+                    <br />
+                    Sunday: 11am–5pm
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.instagram.com/noveltybakery_/"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#8C1C13] hover:text-[#C5162C] transition-colors text-2xl"
+                >
+                  <FaInstagram />
+                </a>
               </div>
             </div>
+
+           <EmailForm />
           </div>
         </section>
 
-        {/* Map reuse */}
         <Gmap />
       </main>
 
