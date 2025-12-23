@@ -28,7 +28,7 @@ const Newsletter: React.FC = () => {
   return (
     <div className="text-center md:text-left">
       <p className="mb-3 leading-relaxed text-center">
-        Follow us on our newsletter
+        Stay notified by joining our newsletter!
       </p>
 
       <form
