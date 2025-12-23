@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import fairyCakes from "../assets/images/palmier.png"
+import heroImg from "../assets/images/nimki.png"
 
 const Hero = () => {
   return (
-    <section className="relative border-b border-[#E8CFA4] bg-[#FFF7ED]">
+    <section className="relative  bg-[#FFF7ED]">
       {/* Background image */}
-      <div className="relative z-0 h-[260px] md:h-[420px] overflow-hidden">
+      <div className="relative z-0 h-[260px] md:h-[480px] overflow-hidden">
         <img
-          src={fairyCakes}
+          src={heroImg}
           alt="Hero image"
           className="w-full h-full object-cover object-center"
         />
@@ -16,14 +16,14 @@ const Hero = () => {
       {/* Centered framed card */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8">
         {/* Outer border */}
-        <div className="md:-mt-48 -mt-20 border border-[#FFF7ED] px-[8px] py-[8px]">
+        <div className="md:-mt-38 -mt-20 border border-[#FFF7ED] px-[8px] py-[8px]">
           {/* Inner card */}
           <div className="w-full h-full bg-[#FFF7ED] px-8 sm:px-14 py-10 md:py-8 text-center">
-            <p className="font-serif italic text-[18px] md:text-[22px] text-[#B46A3C] mb-3">
+            <p className="font-serif italic text-[18px] md:text-[22px] text-[#8C1C13] mb-3">
               Welcome to
             </p>
 
-            <h1 className="text-[32px] md:text-[40px] tracking-[0.01em] uppercase text-[#8C1C13] mb-5">
+            <h1 className="text-[32px] font-bold md:text-[40px] tracking-[0.06em] uppercase text-[#8C1C13] mb-5">
               Novelty Bakery
             </h1>
 
@@ -33,7 +33,7 @@ const Hero = () => {
 
 
             <Link to="/products">
-              <button className="inline-flex items-center justify-center border  px-12 py-3 text-[11px] tracking-[0.12em] uppercase text-[#8C1C13] bg-[#FFF7ED] hover:bg-[#F8EFD9] transition-colors">
+              <button className="inline-flex items-center justify-center border  px-12 py-3 text-[11px] tracking-[0.12em] font-semibold uppercase text-[#8C1C13] bg-[#FFF7ED] hover:bg-[#F8EFD9] transition-colors">
                 View Menu
               </button>
             </Link>
@@ -41,8 +41,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Space under card */}
-      <div className="h-16 md:h-20" />
+   
     </section>
   );
 };

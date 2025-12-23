@@ -37,7 +37,7 @@ const EmailForm = () => {
 
         <button
           type="submit"
-          className="mt-1 w-full border border-[#8C1C13] text-[#8C1C13] py-2.5 text-[11px] tracking-[0.14em] uppercase hover:bg-[#f9efef] transition-colors"
+          className="mt-1 w-full border border-[#8C1C13] text-[#8C1C13] py-2.5 text-[11px] tracking-[0.14em] uppercase hover:bg-[#f9f9ef] transition-colors"
         >
           Send
         </button>
