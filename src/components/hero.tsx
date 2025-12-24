@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroImg from "../assets/images/nimki.png"
+import heroImg from "../assets/images/biscuit-rusk.png"
 
 const Hero = () => {
   return (
@@ -33,7 +33,7 @@ const Hero = () => {
 
 
             <Link to="/products">
-              <button className="inline-flex items-center justify-center border  px-12 py-3 text-[11px] tracking-[0.12em] font-semibold uppercase text-[#8C1C13] bg-[#FFF7ED] hover:bg-[#F8EFD9] transition-colors">
+              <button className="inline-flex items-center justify-center border  px-12 py-3 text-[11px] tracking-[0.12em] font-semibold uppercase text-[#8C1C13] bg-[#ffffff] hover:bg-[#fff4f3] transition-colors">
                 View Menu
               </button>
             </Link>
