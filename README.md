@@ -12,5 +12,7 @@ A small brochure-style website for a Bakery, built with React, React Router and 
 
 ## Running the project
 Clone the rep: `git clone https://github.com/sak3y/novelty-bakery.git`
+
 Run `npm i` in the CLI
+
 Start the server with `npm run dev`
