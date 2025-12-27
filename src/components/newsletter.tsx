@@ -26,40 +26,38 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <div className="text-center md:text-left">
-      <p className="mb-3 leading-relaxed text-center">
-        Stay notified by joining our newsletter!
-      </p>
+    <div className="flex justify-center">
+      <div className="text-center">
+        <p className="mb-3 leading-relaxed">Stay notified by joining our newsletter!</p>
 
-      <form
-        onSubmit={handleSubmit}
-        noValidate
-        className="inline-flex w-full max-w-xs overflow-hidden  border border-[#8C1C13] bg-white"
-      >
-        <input
-          type="email"
-          placeholder="email address"
-          className="flex-1 px-3 py-2 text-[12px] focus:outline-none"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={status === "submitting"}
-        />
-        <button
-          type="submit"
-          className="px-4 py-2 text-[11px] uppercase tracking-[0.2em] bg-[#8C1C13] text-white hover:bg-[#C5162C] transition-colors disabled:opacity-60"
-          disabled={status === "submitting"}
+        <form
+          onSubmit={handleSubmit}
+          noValidate
+          className="inline-flex w-full max-w-xs overflow-hidden border border-[#8C1C13] bg-white"
         >
-          {status === "submitting" ? "..." : "Go!"}
-        </button>
-      </form>
+          <input
+            type="email"
+            placeholder="email address"
+            className="flex-1 px-4 py-2 text-[12px] focus:outline-none"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === "submitting"}
+          />
+          <button
+            type="submit"
+            className="px-4 py-2 text-[11px] uppercase tracking-[0.2em] bg-[#8C1C13] text-white hover:bg-[#C5162C] transition-colors disabled:opacity-60"
+            disabled={status === "submitting"}
+          >
+            {status === "submitting" ? "..." : "Go!"}
+          </button>
+        </form>
 
-      {status === "error" && (
-        <p className="mt-2 text-center text-[11px] text-red-600">{errorMessage}</p>
-      )}
+        {status === "error" && <p className="mt-2 text-[11px] text-red-600">{errorMessage}</p>}
 
-      {status === "success" && (
-        <p className="mt-2 text-[11px] text-center text-green-700">Thanks for subscribing!</p>
-      )}
+        {status === "success" && (
+          <p className="mt-2 text-[11px] text-green-700">Thanks for subscribing!</p>
+        )}
+      </div>
     </div>
   );
 };
