@@ -12,13 +12,13 @@ const CategoriesSection = () => {
       to: "/products#pastries",
     },
     {
-      title: "Delicacies",
+      title: "Palmiers",
       image: palmiersImg,
       text: "Palmiers and other little treats for sharing or saving for later.",
       to: "/products#delicacies",
     },
     {
-      title: "Biscuits",
+      title: "Rusks",
       image: biscuitImg,
       text: "Crisp rusks and biscuits perfect with tea, coffee or for the biscuit tin.",
       to: "/products#biscuits",
@@ -26,42 +26,39 @@ const CategoriesSection = () => {
   ];
 
   return (
-    <section className="bg-[#FFF7ED] border-b border-[#E8CFA4] py-16 md:py-20">
+    <section className="border-t border-neutral-200 bg-white py-16 md:py-24 [font-family:'Baloo_2',cursive]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid gap-10 md:gap-12 md:grid-cols-3">
           {items.map((item) => (
-            <article
-              key={item.title}
-              className="group flex flex-col bg-white shadow-[0_12px_30px_rgba(0,0,0,0.06)]"
-            >
-
-              <div className="bg-white">
-                <div className="border border-[#E8CFA4]">
+            <article key={item.title} className="flex flex-col">
+              <Link to={item.to}>
+                <div className="aspect-[4/3] overflow-hidden border border-neutral-200 bg-white">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.03]"
                   />
                 </div>
-              </div>
+              </Link>
 
-              {/* Text block */}
-              <div className="px-6 pt-4 pb-6">
-                <h3 className="font-serif text-[22px] font-semibold md:text-[24px] text-[#8C1C13] mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] md:text-[15px] leading-relaxed text-[#4A3725] mb-4">
-                  {item.text}
-                </p>
-
-                {/* Hover button */}
-                <div className="mt-2 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
-                  <Link to={item.to}>
-                    <button className="inline-flex items-center justify-center border border-[#8C1C13] px-6 py-2 text-[11px] tracking-[0.16em] uppercase text-[#2B1400] bg-transparent hover:bg-[#fff5f5] transition-colors">
-                      View
-                    </button>
-                  </Link>
+              <div className="mt-4 flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <h3 className="text-lg md:text-2xl font-bold leading-snug text-neutral-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-md text-neutral-700">
+                    {item.text}
+                  </p>
                 </div>
+
+                <Link to={item.to}>
+                  <button
+                    className="mt-1 inline-flex h-9 w-9 items-center justify-center bg-black text-white text-xl leading-none hover:bg-neutral-800 transition-colors"
+                    aria-label={`View ${item.title}`}
+                  >
+                     →
+                  </button>
+                </Link>
               </div>
             </article>
           ))}

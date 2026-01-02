@@ -27,15 +27,6 @@ const categories: { title: string; intro?: string; items: Product[] }[] = [
       { name: "Bread rolls", description: "White or brown, baked daily.", price: "£0.50 each" },
     ],
   },
-  // {
-  //   // title: "Cakes & slices",
-  //   // intro: "Simple celebration cakes and counter treats.",
-  //   // items: [
-  //   //   { name: "Cream slice", description: "Layers of pastry with whipped cream.", price: "£2.80" },
-  //   //   { name: "Jam sponge", description: "Soft sponge with jam and icing.", price: "£2.50" },
-  //   //   { name: "Celebration cakes", description: "Made to order for birthdays and family events.", note: "Price on enquiry" },
-  //   // ],
-  // },
   {
     title: "Biscuits & small bakes",
     intro: "For tea breaks, school runs and after‑dinner treats.",
@@ -49,56 +40,56 @@ const categories: { title: string; intro?: string; items: Product[] }[] = [
 
 const Products = () => {
   return (
-    <div className="min-h-screen bg-[#FFF7ED] text-[#1B1B1B]">
+    <div className="min-h-screen bg-white text-neutral-900 [font-family:'Baloo_2',cursive]">
       <header>
         <Navbar />
       </header>
 
       <main>
         {/* Intro */}
-        <section className="border-b border-[#E8CFA4]">
+        <section className="border-b border-neutral-200">
           <div className="max-w-5xl mx-auto px-4 py-12 md:py-16 text-center">
-            <p className="text-[11px] tracking-[0.22em] uppercase text-[#B46A3C] mb-3">
+            <p className="text-[11px] tracking-[0.18em] uppercase text-neutral-600 mb-3">
               Products
             </p>
-            <h1 className="text-2xl md:text-3xl tracking-[0.14em] uppercase text-[#2B1400]">
+            <h1 className="text-2xl md:text-3xl tracking-[0.08em] uppercase text-neutral-900">
               Everyday bakes & fresh bread
             </h1>
-            <div className="h-px w-16 mx-auto mt-4 mb-6 bg-[#D1A954]" />
-            <p className="mt-2 text-sm md:text-base leading-relaxed text-[#4A3725] max-w-2xl mx-auto">
-              This menu gives a flavour of what you’ll usually find in the counter.
+            <div className="h-px w-16 mx-auto mt-4 mb-6 bg-[#D4AF37]" />
+            <p className="mt-2 text-sm md:text-base leading-relaxed text-neutral-700 max-w-2xl mx-auto">
+              This menu gives a flavour of what you will usually find in the counter.
             </p>
           </div>
         </section>
 
         {/* Categories */}
-        <section className="border-b border-[#E8CFA4]">
+        <section className="border-b border-neutral-200">
           <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 grid gap-10 md:grid-cols-2">
             {categories.map((cat) => (
               <div
                 key={cat.title}
-                className="bg-[#F4E8D4] border border-[#E2C89A] px-6 py-8 md:px-8 md:py-9"
+                className="bg-white border border-neutral-200 px-6 py-8 md:px-8 md:py-9 shadow-sm"
               >
-                <h2 className="text-xs tracking-[0.22em] uppercase text-[#2B1400] mb-2">
+                <h2 className="text-xs tracking-[0.18em] uppercase text-neutral-900 mb-2">
                   {cat.title}
                 </h2>
                 {cat.intro && (
-                  <p className="mb-4 text-sm text-[#7A5A40]">{cat.intro}</p>
+                  <p className="mb-4 text-sm text-neutral-700">{cat.intro}</p>
                 )}
 
-                <ul className="space-y-3 text-sm text-[#4A3725]">
+                <ul className="space-y-3 text-sm text-neutral-800">
                   {cat.items.map((item) => (
                     <li key={item.name}>
                       <div className="flex justify-between gap-3">
                         <span className="font-semibold">{item.name}</span>
                         {(item.price || item.note) && (
-                          <span className="text-[#7A5A40] text-xs uppercase tracking-[0.16em]">
+                          <span className="text-xs uppercase tracking-[0.14em] text-neutral-600">
                             {item.price ?? item.note}
                           </span>
                         )}
                       </div>
                       {item.description && (
-                        <p className="text-[13px] text-[#5A4330]">
+                        <p className="text-[13px] text-neutral-700">
                           {item.description}
                         </p>
                       )}

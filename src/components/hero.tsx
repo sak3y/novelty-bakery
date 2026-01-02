@@ -1,47 +1,44 @@
 import { Link } from "react-router-dom";
-import heroImg from "../assets/images/biscuit-rusk.png"
+import heroImg from "../assets/images/bakery-aes.png";
 
 const Hero = () => {
   return (
-    <section className="relative  bg-[#FFF7ED]">
-      {/* Background image */}
-      <div className="relative z-0 h-[260px] md:h-[480px] overflow-hidden">
+    <section className="relative bg-white [font-family:'Baloo_2',cursive]">
+      {/* Background image with soft dark overlay */}
+      <div className="relative z-0 h-[320px] md:h-[480px] overflow-hidden">
         <img
           src={heroImg}
-          alt="Hero image"
+          alt="Crisp rusk biscuits"
           className="w-full h-full object-cover object-center"
         />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Centered framed card */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8">
-        {/* Outer border */}
-        <div className="md:-mt-38 -mt-20 border border-[#FFF7ED] px-[8px] py-[8px]">
-          {/* Inner card */}
-          <div className="w-full h-full bg-[#FFF7ED] px-8 sm:px-14 py-10 md:py-8 text-center">
-            <p className="font-serif italic text-[18px] md:text-[22px] text-[#8C1C13] mb-3">
-              Welcome to
-            </p>
+      {/* Centered card overlapping hero */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="md:-mt-28 -mt-20 bg-white shadow-[0_18px_45px_rgba(0,0,0,0.16)] border border-neutral-200 px-6 sm:px-10 py-9 text-center rounded-sm">
+          <p className="text-xs md:text-sm tracking-[0.18em] uppercase text-neutral-600 mb-3">
+            Fresh bakes in East Ham
+          </p>
 
-            <h1 className="text-[32px] font-bold md:text-[40px] tracking-[0.06em] uppercase text-[#8C1C13] mb-5">
-              Novelty Bakery
-            </h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-[0.06em] uppercase text-neutral-900 mb-4">
+            Novelty Bakery
+          </h1>
 
-            <p className="text-[15px] md:text-[17px] leading-relaxed text-[#4A3725] max-w-3xl mx-auto mb-9">
-              Fresh puff pastries, breads, cakes, and everyday treats.
-            </p>
+          <p className="text-sm md:text-base leading-relaxed text-neutral-700 max-w-2xl mx-auto mb-7">
+            Fresh puff pastries, breads, cakes and everyday treats baked on High Street North.
+          </p>
 
-
-            <Link to="/products">
-              <button className="inline-flex items-center justify-center border px-12 py-3 text-[11px] tracking-[0.12em] font-semibold uppercase  border-[#C7A840] hover:bg-[#F8EFD9] transition-colors">
-                View Menu
-              </button>
-            </Link>
-          </div>
+          <Link to="/products">
+            <button className="inline-flex items-center justify-center border border-[#D4AF37] px-10 py-2.5 text-[11px] md:text-xs tracking-[0.18em] font-semibold uppercase text-neutral-900 bg-white hover:bg-[#FFF8E1] transition-colors">
+              View menu
+            </button>
+          </Link>
         </div>
       </div>
 
-   
+      {/* breathing space below overlap */}
+      <div className="h-10 md:h-14" />
     </section>
   );
 };

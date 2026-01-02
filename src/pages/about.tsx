@@ -1,37 +1,40 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import shopFront from "../assets/images/shop-front2.png"
+import shopFront from "../assets/images/shop-front2.png";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#FFF7ED] text-[#1B1B1B]">
+    <div className="min-h-screen bg-white text-neutral-900 [font-family:'Baloo_2',cursive]">
       <header>
         <Navbar />
       </header>
 
       <main>
-        {/* Intro section */}
-        <section className="border-b border-[#E8CFA4]">
+        {/* Intro */}
+        <section className="border-b border-neutral-200">
           <div className="max-w-5xl mx-auto px-4 py-14 md:py-20 text-center">
-            <p className="text-[11px] tracking-[0.22em] uppercase text-[#B46A3C] mb-3">
+            <p className="text-[11px] tracking-[0.18em] uppercase text-neutral-600 mb-3">
               About Novelty Bakery
             </p>
-            <h1 className="text-2xl md:text-3xl tracking-[0.14em] uppercase text-[#2B1400]">
-              A Corner Bakery
+            <h1 className="text-2xl md:text-3xl tracking-[0.08em] uppercase text-neutral-900">
+              A corner bakery
               <br />
-              With Regulars, Not Customers
+              with regulars, not customers
             </h1>
-            <p className="mt-6 text-sm md:text-base leading-relaxed text-[#4A3725] max-w-2xl mx-auto">
-              Novelty Bakery sits on the corner of High Street North and is a family‑owned business. It is the sort of place you duck into when you want a warm chicken pastry or a soft piece of bread. Since opening in 1985, we have been open almost every single day. We always make sure our shelves are well stocked, so if you are free, why not pop by and treat yourself?
+            <p className="mt-6 text-sm md:text-base leading-relaxed text-neutral-700 max-w-2xl mx-auto">
+              Novelty Bakery sits on the corner of High Street North and is a family‑owned
+              business. It is the sort of place you duck into when you want a warm chicken pastry
+              or a soft piece of bread. Since opening in 1985, we have been open almost every
+              single day. We always make sure our shelves are well stocked, so if you are free,
+              why not pop by and treat yourself?
             </p>
           </div>
         </section>
 
         {/* Story + image */}
-        <section className="border-b border-[#E8CFA4]">
+        <section className="border-b border-neutral-200">
           <div className="max-w-6xl mx-auto px-4 py-12 md:py-18 grid gap-8 md:grid-cols-2 md:items-stretch">
-            {/* Shop photo slot */}
-            <div className="h-[260px] md:h-[420px] overflow-hidden rounded-sm border border-[#E2C89A]/70">
+            <div className="h-[260px] md:h-[420px] overflow-hidden rounded-sm border border-neutral-200">
               <img
                 src={shopFront}
                 alt="Corner view of Novelty Bakery on High Street North"
@@ -39,18 +42,17 @@ const About = () => {
               />
             </div>
 
-            {/* Text card */}
-            <div className="bg-[#F4E8D4] border border-[#E2C89A] px-6 py-10 md:px-10 md:py-14 flex flex-col justify-center">
-              <h2 className="text-sm tracking-[0.22em] uppercase text-[#B46A3C] mb-2">
+            <div className="bg-white border border-neutral-200 px-6 py-10 md:px-10 md:py-14 flex flex-col justify-center shadow-sm">
+              <h2 className="text-xs tracking-[0.18em] uppercase text-neutral-700 mb-3">
                 From morning loaves to late‑day treats
               </h2>
-              <p className="text-sm leading-relaxed text-[#4A3725] mb-4">
+              <p className="text-sm leading-relaxed text-neutral-700 mb-4">
                 Mornings at Novelty are all about the everyday essentials: soft sandwich loaves,
                 crusty rolls and trays of puff pastry fresh from the oven. Later in the day, the
                 counter fills with simple celebration cakes, biscuits and pastries for last‑minute
                 birthdays and tea‑time plans.
               </p>
-              <p className="text-sm leading-relaxed text-[#4A3725]">
+              <p className="text-sm leading-relaxed text-neutral-700">
                 The aim is to keep things unfussy – familiar flavours, generous slices and a warm
                 hello when you step through the door.
               </p>
@@ -58,16 +60,16 @@ const About = () => {
           </div>
         </section>
 
-        {/* Values / little list */}
-        <section className="border-b border-[#E8CFA4]">
+        {/* Values */}
+        <section className="border-b border-neutral-200">
           <div className="max-w-5xl mx-auto px-4 py-12 md:py-16">
-            <p className="text-[11px] tracking-[0.22em] uppercase text-[#B46A3C] mb-4 text-center">
+            <p className="text-[11px] tracking-[0.18em] uppercase text-neutral-600 mb-4 text-center">
               What matters here
             </p>
 
-            <div className="grid gap-8 md:grid-cols-3 text-sm text-[#4A3725]">
+            <div className="grid gap-8 md:grid-cols-3 text-sm text-neutral-700">
               <div>
-                <h3 className="text-xs tracking-[0.18em] uppercase text-[#2B1400] mb-2">
+                <h3 className="text-xs tracking-[0.16em] uppercase text-neutral-900 mb-2">
                   Fresh, not fussy
                 </h3>
                 <p>
@@ -76,7 +78,7 @@ const About = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xs tracking-[0.18em] uppercase text-[#2B1400] mb-2">
+                <h3 className="text-xs tracking-[0.16em] uppercase text-neutral-900 mb-2">
                   For the neighbourhood
                 </h3>
                 <p>
@@ -85,7 +87,7 @@ const About = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xs tracking-[0.18em] uppercase text-[#2B1400] mb-2">
+                <h3 className="text-xs tracking-[0.16em] uppercase text-neutral-900 mb-2">
                   Cakes for moments
                 </h3>
                 <p>

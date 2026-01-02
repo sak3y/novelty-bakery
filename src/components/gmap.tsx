@@ -1,6 +1,8 @@
+
+
 const Gmap = () => {
   return (
-    <section className="py-18  bg-white">
+    <section className="py-18 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         <div className="w-full h-64 md:h-100">
           {/* Google Map Embed */}
