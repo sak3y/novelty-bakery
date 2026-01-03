@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import shopFront from "../assets/images/shop-front2.png";
+import shopFront from "../assets/images/shop-front.png";
 
 const About = () => {
   return (
