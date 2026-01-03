@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import pastriesImg from "../assets/images/pastries.png";
 import palmiersImg from "../assets/images/palmier.png";
@@ -5,6 +6,18 @@ import biscuitImg from "../assets/images/biscuit-rusk.png";
 import fairyCakesImg from "../assets/images/fairy-cake.png";
 
 const CategoriesSection = () => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollByAmount = (direction: "left" | "right") => {
+    const node = scrollRef.current;
+    if (!node) return;
+    const amount = node.clientWidth * 0.9;
+    node.scrollBy({
+      left: direction === "right" ? amount : -amount,
+      behavior: "smooth",
+    });
+  };
+
   const items = [
     {
       title: "Pastries",
@@ -36,7 +49,10 @@ const CategoriesSection = () => {
     <section className="border-t border-neutral-200 bg-white py-16 md:py-24 [font-family:'Baloo_2',cursive]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Scroll container */}
-        <div className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory">
+        <div
+          ref={scrollRef}
+          className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-neutral-400 scrollbar-track-neutral-200"
+        >
           {items.map((item) => (
             <article
               key={item.title}
@@ -73,6 +89,24 @@ const CategoriesSection = () => {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Scroll buttons */}
+        <div className="mt-4 flex justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => scrollByAmount("left")}
+            className="inline-flex h-9 px-4 items-center justify-center border border-neutral-300 text-xs tracking-[0.14em] uppercase text-neutral-700 bg-white hover:bg-neutral-100 transition-colors"
+          >
+            ← Prev
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByAmount("right")}
+            className="inline-flex h-9 px-4 items-center justify-center border border-neutral-300 text-xs tracking-[0.14em] uppercase text-neutral-700 bg-white hover:bg-neutral-100 transition-colors"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </section>

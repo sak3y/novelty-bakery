@@ -1,5 +1,4 @@
-import treatsBg from "../assets/images/white-pattern.png";
-
+import treatsBg from "../assets/images/white-pattern.png"
 const TreatsIntro = () => {
   return (
     <section className="relative py-12 md:py-20 [font-family:'Baloo_2',cursive]">
@@ -18,16 +17,16 @@ const TreatsIntro = () => {
         <div className="grid md:grid-cols-2 gap-10">
           <div className="hidden md:block" /> {/* left empty */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-[0.04em] text-neutral-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-[0.04em] text-neutral-900 mb-12">
               Treats to Take Home
             </h2>
 
-            <p className="text-sm md:text-base leading-relaxed text-neutral-800 mb-4">
+            <p className="text-sm md:text-base leading-relaxed text-neutral-800 mb-8">
               From puff pastries to rusks and biscuits, Novelty Bakery is stocked with bakes to
               take home for tea time or to share with family.
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed text-neutral-800 mb-4">
+            <p className="text-sm md:text-base leading-relaxed text-neutral-800 mb-8">
               Trays of savoury snacks, simple cakes and everyday favourites are baked on High
               Street North and put straight onto the counter.
             </p>
