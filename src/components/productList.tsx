@@ -51,24 +51,24 @@ const CategoriesSection = () => {
         {/* Scroll container */}
         <div
           ref={scrollRef}
-          className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-neutral-400 scrollbar-track-neutral-200"
+          className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar"
         >
           {items.map((item) => (
             <article
               key={item.title}
-              className="flex-shrink-0 w-[80%] sm:w-[55%] md:w-[32%] snap-start flex flex-col"
+              className="flex-shrink-0 w-[80%] sm:w-[55%] md:w-[32%] snap-start flex flex-col rounded-lg border border-neutral-200 bg-white shadow-sm"
             >
               <Link to={item.to}>
-                <div className="aspect-[4/3] overflow-hidden border border-neutral-200 bg-white">
+                <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.03]"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.05]"
                   />
                 </div>
               </Link>
 
-              <div className="mt-4 flex items-start justify-between gap-4">
+              <div className="p-4 flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <h3 className="text-lg md:text-2xl font-bold leading-snug text-neutral-900">
                     {item.title}
