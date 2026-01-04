@@ -1,43 +1,51 @@
 const EmailForm = () => {
   return (
     <div>
-      <form className="space-y-4 text-[13px] md:text-[14px] text-[#4A3725]">
+      <form className="space-y-4 text-[13px] md:text-[14px] text-neutral-800">
         <div className="grid gap-3 md:grid-cols-2">
           <div>
-            <label className="block mb-1 text-[11px] text-[#2B1400]">First name</label>
+            <label className="block mb-1 text-[11px] uppercase tracking-[0.12em] text-neutral-700">
+              First name
+            </label>
             <input
               type="text"
-              className="w-full border border-[#8C1C13] px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#8C1C13]"
+              className="w-full border border-neutral-300 px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#D4AF37]"
             />
           </div>
           <div>
-            <label className="block mb-1 text-[11px] text-[#2B1400]">Last name</label>
+            <label className="block mb-1 text-[11px] uppercase tracking-[0.12em] text-neutral-700">
+              Last name
+            </label>
             <input
               type="text"
-              className="w-full border border-[#8C1C13] px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#8C1C13]"
+              className="w-full border border-neutral-300 px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#D4AF37]"
             />
           </div>
         </div>
 
         <div>
-          <label className="block mb-1 text-[11px] text-[#2B1400]">Email</label>
+          <label className="block mb-1 text-[11px] uppercase tracking-[0.12em] text-neutral-700">
+            Email
+          </label>
           <input
             type="email"
-            className="w-full border border-[#8C1C13] px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#8C1C13]"
+            className="w-full border border-neutral-300 px-3 py-1.5 text-[13px] focus:outline-none focus:border-[#D4AF37]"
           />
         </div>
 
         <div>
-          <label className="block mb-1 text-[11px] text-[#2B1400]">Message</label>
+          <label className="block mb-1 text-[11px] uppercase tracking-[0.12em] text-neutral-700">
+            Message
+          </label>
           <textarea
             rows={4}
-            className="w-full border border-[#8C1C13] px-3 py-1.5 text-[13px] resize-none focus:outline-none focus:border-[#8C1C13]"
+            className="w-full border border-neutral-300 px-3 py-1.5 text-[13px] resize-none focus:outline-none focus:border-[#D4AF37]"
           />
         </div>
 
         <button
           type="submit"
-          className="mt-1 w-full border border-[#8C1C13] text-[#8C1C13] py-2.5 text-[11px] tracking-[0.14em] uppercase hover:bg-[#f9f9ef] transition-colors"
+          className="mt-1 w-full border border-[#D4AF37] bg-white text-neutral-900 py-2.5 text-[11px] tracking-[0.16em] uppercase hover:bg-[#FFF8E1] transition-colors"
         >
           Send
         </button>

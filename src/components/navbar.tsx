@@ -11,22 +11,21 @@ const Navbar = () => {
     { to: "/contact", label: "Contact" },
   ];
 
-  // split links to go left / right of logo on desktop
   const leftLinks = links.slice(0, 2);
   const rightLinks = links.slice(2);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FFF7ED]/95 backdrop-blur border-b border-[#E8CFA4]">
+    <header className="sticky top-0 z-50 bg-white [font-family:'Baloo_2',cursive] border-b border-neutral-200">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Single row: links left + logo + links right (desktop) */}
-        <div className="hidden md:flex items-center justify-between py-3 md:py-4">
+        {/* desktop */}
+        <div className="hidden md:flex items-center justify-between h-20">
           {/* Left links */}
-          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.1em] uppercase text-[#7A5A40]">
+          <nav className="flex items-center gap-6 text-sm uppercase tracking-[0.12em] text-neutral-800">
             {leftLinks.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="pb-1 border-b border-transparent hover:border-[#D1A954] hover:text-[#8C1C13] transition-colors"
+                className="pb-0.5 border-b-2 border-transparent hover:border-neutral-900 transition-colors"
               >
                 {item.label}
               </Link>
@@ -34,24 +33,19 @@ const Navbar = () => {
           </nav>
 
           {/* Center logo */}
-          <div>
-            <Link to="/" className="leading-none text-center">
-              <span className="block text-lg md:text-xl text-[#8C1C13] tracking-[0.01em] uppercase">
-                Novelty Bakery
-              </span>
-              <span className="block text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[#B46A3C] mt-1">
-                 East Ham
-              </span>
-            </Link>
-          </div>
+          <Link to="/" className="px-4">
+            <span className="block text-2xl font-bold scale-y-110 text-neutral-900 uppercase">
+              Novelty Bakery
+            </span>
+          </Link>
 
           {/* Right links */}
-          <nav className="flex flex-1 justify-evenly text-[12px] tracking-[0.1em] uppercase text-[#7A5A40]">
+          <nav className="flex items-center gap-6 text-sm uppercase tracking-[0.02em] text-neutral-800">
             {rightLinks.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="pb-1 border-b border-transparent hover:border-[#D1A954] hover:text-[#8C1C13] transition-colors"
+                className="pb-0.5 border-b-2 border-transparent hover:border-neutral-900 transition-colors"
               >
                 {item.label}
               </Link>
@@ -59,40 +53,30 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* Mobile */}
-        <div className="flex items-center justify-between py-3 md:py-4 md:hidden">
-          <div className="flex-1" />
-          <div className="flex flex-col items-center">
-            <Link to="/" className="leading-none text-center">
-               <span className="block text-lg md:text-xl text-[#8C1C13] tracking-[0.01em] uppercase">
-                Novelty Bakery
-              </span>
-              <span className="block text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[#B46A3C] mt-1">
-                 East Ham
-              </span>
-            </Link>
-          </div>
-          <div className="flex-1 flex justify-end">
-            <button
-              className="p-1.5"
-              onClick={() => setMobileMenuOpen((v) => !v)}
-              aria-label="Toggle menu"
-            >
-              <span className="block w-5 h-0.5 mb-1 bg-[#8C1C13]" />
-              <span className="block w-5 h-0.5 mb-1 bg-[#8C1C13]" />
-              <span className="block w-5 h-0.5 bg-[#8C1C13]" />
-            </button>
-          </div>
+        {/* mobile */}
+        <div className="flex items-center justify-between h-16 md:hidden text-neutral-900">
+          <Link to="/" className="text-xl font-bold scale-y-110 uppercase">
+            Novelty Bakery
+          </Link>
+          <button
+            className="p-1.5"
+            onClick={() => setMobileMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            <span className="block w-5 h-0.5 mb-1 bg-neutral-900" />
+            <span className="block w-5 h-0.5 mb-1 bg-neutral-900" />
+            <span className="block w-5 h-0.5 bg-neutral-900" />
+          </button>
         </div>
 
         {mobileMenuOpen && (
-          <nav className="md:hidden pb-4 text-sm text-center">
-            <ul className="space-y-2">
+          <nav className="md:hidden pb-3 text-center text-sm uppercase tracking-[0.12em] text-neutral-900 border-t border-neutral-200">
+            <ul className="space-y-2 pt-2">
               {links.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="block py-1 text-[#2B1400]"
+                    className="block py-1"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}

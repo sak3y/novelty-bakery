@@ -1,10 +1,11 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Gmap from "../components/gmap";
-import Banner from "../components/banner";
+import Banner from "../components/announcement";
 import Hero from "../components/hero";
-import CategoriesSection from "../components/productCat";
+import CategoriesSection from "../components/productList";
 import AboutCard from "../components/aboutCard";
+import LetterboxIntro from "../components/letterBox";
 
 const Home = () => {
   return (
@@ -18,14 +19,14 @@ const Home = () => {
         <Hero />
         <CategoriesSection />
         <AboutCard />
+        <Gmap />
+        <LetterboxIntro />
       </main>
 
-      <Gmap />
+
       <Footer />
     </div>
   );
 };
-
-
 
 export default Home;
