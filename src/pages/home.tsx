@@ -19,10 +19,9 @@ const Home = () => {
         <Hero />
         <CategoriesSection />
         <AboutCard />
-        <Gmap />
         <LetterboxIntro />
+        <Gmap />
       </main>
-
 
       <Footer />
     </div>
