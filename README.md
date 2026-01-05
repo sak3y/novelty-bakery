@@ -37,6 +37,7 @@ npm install
 
 3. **Run the development server**
 
+
 npm run dev
 
 4. Open the URL shown in the terminal in your browser.
