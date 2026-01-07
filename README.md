@@ -38,7 +38,7 @@ npm install
 3. **Run the development server**
 
 
-##### All Right Reserved
+###### All Right Reserved
 
 npm run dev
 
