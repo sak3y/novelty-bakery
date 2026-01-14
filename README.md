@@ -10,7 +10,7 @@ A simple brochure-style website for a small London bakery, built to show off eve
 - Product sections for cakes, pastries and everyday treats  
 - About page with the bakery story and values  
 - FAQs and contact details (phone, email, directions)  
-- Responsive design that works on mobile, tablet and desktop  
+- Responsive design that works on mobile, tablet and desktop
 
 ---
 
