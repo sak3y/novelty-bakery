@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "deploy": "npm run build && wrangler pages deploy dist novelty-baker",
+    "deploy": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
