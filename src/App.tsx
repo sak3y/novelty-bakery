@@ -19,9 +19,10 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Route path="*" element={<NotFound />} />
       <Cookie />
     </>
   );
