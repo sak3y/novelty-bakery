@@ -7,6 +7,7 @@ import Faq from "./pages/faq";
 import Privacy from "./pages/privacy";
 import Products from "./pages/product";
 import Cookie from "./components/cookie";
+import NotFound from "./pages/notFound";
 
 function App() {
   return (
@@ -15,11 +16,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
 
+      <Route path="*" element={<NotFound />} />
       <Cookie />
     </>
   );
