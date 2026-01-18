@@ -1,0 +1,9 @@
+font/woff2                           .woff2
+font/woff                            .woff  
+application/font-woff                .woff
+application/font-sfnt                .sfnt
+application/vnd.ms-fontobject        .eot
+application/octet-stream             .eot
+application/javascript               .js
+text/css                             .css
+image/svg+xml                        .svg
