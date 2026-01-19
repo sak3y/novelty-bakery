@@ -1,8 +1,20 @@
+import { Link } from "react-router-dom";
+
 const Privacy = () => {
   return (
-    <main className="bg-[#FFF7ED] min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 py-12 md:py-16 text-sm text-[#1B1B1B]">
-        <h1 className="text-2xl md:text-3xl tracking-[0.08em] uppercase text-[#2B1400] mb-6">
+    <main className="bg-white min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-4 text-sm text-neutral-950">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 bg-white  transition-colors duration-200"
+        >
+          <svg className="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          Back
+        </Link>
+
+        <h1 className="text-2xl md:text-3xl tracking-[0.08em] uppercase text-[#2B1400] mb-6 py-12 md:py-16 ">
           Privacy Policy
         </h1>
 
@@ -11,21 +23,16 @@ const Privacy = () => {
           information when you visit this website or contact the bakery.
         </p>
 
-        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">
-          1. Who we are
-        </h2>
+        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">1. Who we are</h2>
         <p>
           Novelty Bakery is a local bakery based at 393 High Street North, London E12 6PG. You can
-          contact the bakery by phone or by email at{" "}
-          <span className="font-semibold"></span> 
+          contact the bakery by phone or by email at <span className="font-semibold"></span>
         </p>
 
         <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">
           2. Information collected
         </h2>
-        <p>
-          This website is primarily informational. The bakery may collect:
-        </p>
+        <p>This website is primarily informational. The bakery may collect:</p>
         <ul className="list-disc pl-5 mt-2 space-y-1">
           <li>
             Contact details you choose to send, such as your name, email address and phone number,
@@ -53,22 +60,18 @@ const Privacy = () => {
         </h2>
         <p>
           Novelty Bakery does not sell your personal information. Data may be shared with service
-          providers such as email or website hosting providers only as needed to operate the
-          website and respond to enquiries.
+          providers such as email or website hosting providers only as needed to operate the website
+          and respond to enquiries.
         </p>
 
-        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">
-          5. Data retention
-        </h2>
+        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">5. Data retention</h2>
         <p>
           Personal information from enquiries is kept only for as long as necessary to deal with
           your request and to comply with legal obligations, after which it is deleted or securely
           archived.
         </p>
 
-        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">
-          6. Your rights
-        </h2>
+        <h2 className="mt-6 mb-2 text-base font-semibold text-[#2B1400]">6. Your rights</h2>
         <p>
           Under UK data protection law, you may have rights to access, correct or delete your
           personal data, or to object to certain uses. To exercise these rights, contact the bakery
@@ -83,9 +86,7 @@ const Privacy = () => {
           explain what is used and how you can manage your preferences.
         </p>
 
-        <p className="mt-8 text-xs text-gray-600">
-          Last updated: {new Date().getFullYear()}
-        </p>
+        <p className="mt-8 text-xs text-gray-600">Last updated: {new Date().getFullYear()}</p>
       </div>
     </main>
   );
