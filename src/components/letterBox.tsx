@@ -5,7 +5,7 @@ const MoreInfo = () => {
     <section className="relative bg-white py-12 md:py-20 border-b border-neutral-200 [font-family:'Baloo_2',cursive]">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-10">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Left: Image */}
+        
           <div className="flex justify-center md:justify-start">
             <img
               src={Photo}
@@ -14,7 +14,6 @@ const MoreInfo = () => {
             />
           </div>
 
-          {/* Right: Text */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-[0.04em] text-neutral-900 mb-12">
               Treats to Take Home
