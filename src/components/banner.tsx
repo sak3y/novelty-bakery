@@ -1,9 +1,11 @@
+import { Link } from "react-router";
+
 const Announcement = () => {
   return (
     <div className="w-full bg-[#b69860] text-center py-2.5 text-[11px] md:text-sm tracking-[0.11em] [font-family:'Baloo_2',cursive] border-b border-black/5">
-      <span className="text-white font-normal">
+      <Link to="/products"  className="text-white font-normal">
         handmade cakes & pastries · Limited batches ❤️
-      </span>
+      </Link>
     </div>
   );
 };

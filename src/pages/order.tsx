@@ -1,7 +1,7 @@
 const Order = () => {
     return (
         <>
-            <div>In Progress</div>
+            <div>Comming Soon :/</div>
         </>
     )
 }

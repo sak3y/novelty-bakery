@@ -1,11 +1,15 @@
+import { lazy, Suspense } from "react";
+
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import Gmap from "../components/gmap";
-import Banner from "../components/announcement";
+
+import Banner from "../components/banner";
 import Hero from "../components/hero";
-import CategoriesSection from "../components/productList";
+const CategoriesSection = lazy(() => import("../components/catgegoriesList"));
 import AboutCard from "../components/aboutCard";
-import LetterboxIntro from "../components/letterBox";
+import Letterbox from "../components/letterBox";
+import RevLetterBox from "../components/revLetterBox";
+import Gmap from "../components/gmap";
 
 const Home = () => {
   return (
@@ -17,9 +21,13 @@ const Home = () => {
 
       <main>
         <Hero />
-        <CategoriesSection />
+        <Suspense fallback={<div>Producst are loading...</div>}>
+          <CategoriesSection />
+        </Suspense>
         <AboutCard />
-        <LetterboxIntro />
+        <Letterbox />
+        <RevLetterBox />
+
         <Gmap />
       </main>
 

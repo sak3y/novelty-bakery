@@ -22,11 +22,11 @@ const About = () => {
               with regulars, not customers
             </h1>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-neutral-700 max-w-2xl mx-auto">
-              Novelty Bakery sits on the corner of High Street North and is a family‑owned
-              business. It is the sort of place you duck into when you want a warm chicken pastry
-              or a soft piece of bread. Since opening in 1985, we have been open almost every
-              single day. We always make sure our shelves are well stocked, so if you are free,
-              why not pop by and treat yourself?
+              Novelty Bakery sits on the corner of High Street North and is a family‑owned business.
+              It is the sort of place you duck into when you want a warm chicken pastry or a soft
+              piece of bread. Since opening in 1985, we have been open almost every single day. We
+              always make sure our shelves are well stocked, so if you are free, why not pop by and
+              treat yourself?
             </p>
           </div>
         </section>
@@ -73,8 +73,8 @@ const About = () => {
                   Fresh, not fussy
                 </h3>
                 <p>
-                  Everyday pastry, bread and cakes you recognise, baked early so they are ready
-                  when you need them.
+                  Everyday pastry, bread and cakes you recognise, baked early so they are ready when
+                  you need them.
                 </p>
               </div>
               <div>

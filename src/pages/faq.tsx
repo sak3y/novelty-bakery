@@ -72,9 +72,7 @@ const Faq = () => {
                   <dt className="text-sm md:text-base font-semibold text-neutral-900">
                     {item.question}
                   </dt>
-                  <dd className="mt-2 text-sm leading-relaxed text-neutral-700">
-                    {item.answer}
-                  </dd>
+                  <dd className="mt-2 text-sm leading-relaxed text-neutral-700">{item.answer}</dd>
                 </div>
               ))}
             </dl>

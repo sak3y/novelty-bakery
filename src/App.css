@@ -12,15 +12,3 @@ button {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-@theme {
-  --animate-slideInRight: slideInRight 0.4s ease-out;
-  @keyframes slideInRight {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-}

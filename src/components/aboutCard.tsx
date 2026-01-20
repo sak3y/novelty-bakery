@@ -8,6 +8,7 @@ const AboutCard = () => {
       <div className="relative z-0 h-[560px] md:h-[740px] overflow-hidden">
         <img
           src={heroBg}
+          loading="lazy"
           alt="Bakery background"
           className="w-full h-full object-cover object-center"
         />
