@@ -2,7 +2,7 @@ import Photo from "../assets/images/palmier.png";
 
 const LetterBox = () => {
   return (
-    <section className="relative bg-white py-12 md:py-20 border-b border-neutral-200 [font-family:'Baloo_2',cursive]">
+    <section className="relative bg-white py-12 md:py-20 border-b border-neutral-200 font-['Baloo_2',cursive]">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-10">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center md:justify-start">

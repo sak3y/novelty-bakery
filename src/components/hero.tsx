@@ -3,8 +3,8 @@ import heroImg from "../assets/images/brown-bakery-bg.png";
 
 const Hero = () => {
   return (
-    <section className="relative bg-white [font-family:'Baloo_2',cursive]">
-      <div className="relative z-0 h-[320px] md:h-[420px] overflow-hidden">
+    <section className="relative bg-white font-['Baloo_2',cursive]">
+      <div className="relative z-0 h-80 md:h-105 overflow-hidden">
         <img
           src={heroImg}
           alt="Crisp rusk biscuits"
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="flex flex-col relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
         <div className="md:-mt-28 -mt-20 bg-white shadow-[0_18px_45px_rgba(0,0,0,0.16)] border border-neutral-200 px-6 sm:px-10 py-9 text-center rounded-sm">
           <p className="text-xs md:text-sm tracking-[0.18em] uppercase text-neutral-600 mb-9">
-            Located in East Ham
+            Freshly baked in East Ham
           </p>
 
           <h1 className="text-3xl md:text-4xl font-bold tracking-[0.06em] uppercase text-neutral-900 mb-7">

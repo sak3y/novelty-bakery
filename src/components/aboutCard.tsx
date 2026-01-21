@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AboutCard = () => {
   return (
-    <section className="relative bg-white [font-family:'Baloo_2',cursive]">
+    <section className="relative bg-white font-['Baloo_2',cursive]">
       {/* Image background at fixed height */}
       <div className="relative z-0 h-[560px] md:h-[740px] overflow-hidden">
         <img

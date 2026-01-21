@@ -5,24 +5,35 @@ const Newsletter: React.FC = () => {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const validateEmail = (value: string) => /\S+@\S+\.\S+/.test(value);
+  const validateEmail = (value: string) => /\S+@\S+\.\S+/.test(value); // regex func
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage("");
 
+    // handle invalid emails
     if (!validateEmail(email)) {
       setStatus("error");
       setErrorMessage("Please enter a valid email address.");
       return;
     }
 
-    setStatus("submitting");
+    const body = { email };
 
-    setTimeout(() => {
-      setStatus("success");
-      setEmail("");
-    }, 800);
+    // POST method
+    const res = await fetch("/api/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    // Res update for user
+    if (res.ok) setErrorMessage("Subscribed!");
+    else {
+      setErrorMessage("Couldn't subscribe at this time.");
+    }
   };
 
   return (
@@ -46,7 +57,7 @@ const Newsletter: React.FC = () => {
         />
         <button
           type="submit"
-          className="px-4 py-2 text-[11px] uppercase tracking-[0.18em] bg-[#D4AF37] text-neutral-900 hover:bg-[#e3c45a] transition-colors disabled:opacity-60"
+          className="px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white bg-[#D4AF37] hover:bg-[#e3c45a] transition-colors disabled:opacity-60"
           disabled={status === "submitting"}
         >
           {status === "submitting" ? "..." : "Go"}

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/products", label: "Products" },
+    { to: "/menu", label: "Menu" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
@@ -17,7 +17,7 @@ const Navbar = () => {
   const rightLinks = links.slice(2);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md [font-family:'Baloo_2',cursive] border-b border-neutral-200 transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md font-['Baloo_2',cursive] border-b border-neutral-200 transition-all duration-300">
       <div className="max-w-6xl mx-auto px-4">
         {/* desktop */}
         <div className="hidden md:flex items-center h-20">

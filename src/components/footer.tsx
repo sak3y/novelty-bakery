@@ -5,18 +5,16 @@ import { GoMail } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-neutral-200 bg-white [font-family:'Baloo_2',cursive]">
+    <footer className="border-t border-neutral-200 bg-white font-['Baloo_2',cursive]">
       <div className="max-w-6xl mx-auto px-4 pt-10 pb-4 text-[13px] text-neutral-800">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
           {/* About blurb + icons */}
           <div className="flex flex-col items-center gap-3 text-center">
             <p className="leading-relaxed">
-              Novelty Bakery is a local East Ham high street bakery that serves puff pastry,
-              fresh bread and biscuits.
+              Novelty Bakery is a local East Ham high street bakery that serves puff pastry, fresh
+              bread and biscuits.
             </p>
-            <p className="leading-relaxed">
-              Visit us in store to see what we offer.
-            </p>
+            <p className="leading-relaxed">Visit us in store to see what we offer.</p>
 
             <div className="flex items-center gap-4 pt-1">
               <a
@@ -87,11 +85,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-neutral-200 pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] uppercase tracking-[0.08em] text-neutral-600">
+        <div className="border-t border-neutral-200 pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[12px] tracking-wide text-neutral-600">
+          <div className="flex space-x-1">
+            <p>© {new Date().getFullYear()} Novelty Bakery London All Right Reserved.</p>
+            <p>Designed by Rayhan.</p>
+          </div>
           <Link to="/privacy" className="hover:text-[#D4AF37]">
-            Privacy policy
+            Privacy Policy
           </Link>
-          <p>© {new Date().getFullYear()} Novelty Bakery London</p>
         </div>
       </div>
     </footer>
